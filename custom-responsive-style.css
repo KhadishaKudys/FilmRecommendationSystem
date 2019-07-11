@@ -1,0 +1,183 @@
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575px) {
+  /* header style */
+  #Header .mobile-menu ul li {
+    list-style: none;
+    padding: 0 0 20px 20px;
+  }
+  /* Hero banner style */
+  #HeroBanner .hero-content h1 {
+    font-size: 28px;
+  }
+  #HeroBanner .hero-content p {
+    font-size: 20px;
+  }
+  #HeroBanner .hero-content a {
+    font-size: 18px;
+  }
+  #Header .site-logo-wrap {
+    padding: 23px 0;
+  }
+  #Header .site-logo-wrap .logo img {
+    width: 55px;
+  }
+  #Header.header-fixed .site-logo-wrap .logo img {
+    width: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #Try {
+    padding: 50px 0;
+  }
+  #Try .portfolio-wrapper .each-portfolio {
+    position: relative;
+    width: 100%;
+    float: center;
+    margin: 0 0 10px;
+  }
+  #Try .each-portfolio .hover-cont-wrap {
+    opacity: 1;
+    height: auto;
+    top: auto;
+    bottom: 0;
+  }
+  #Try .each-portfolio .hover-cont-wrap .p-title {
+    top: 0;
+  }
+  #Try .each-portfolio .hover-cont-wrap .p-desc {
+    top: 0;
+  }
+  #Try .each-portfolio .hover-cont-wrap .hover-cont-block {
+    top: 0;
+    transform: translateY(0%);
+  }
+  /* about us style */
+  #About .about-wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+  }
+  #About:after {
+    display: none;
+  }
+  /* testimonial slider style */
+  #Testimonial .testimonial-slider li br {
+    display: none;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Header style */
+  .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  /* Hero banner style goes here */
+  #HeroBanner .hero-content h1 {
+    font-size: 28px;
+  }
+  #HeroBanner .hero-content p {
+    font-size: 20px;
+  }
+  #HeroBanner .hero-content a {
+    font-size: 18px;
+  }
+  #Try .portfolio-wrapper .each-portfolio {
+    position: relative;
+    width: calc(50% - 10px);
+    float: left;
+    margin: 0 5px 10px;
+  }
+  #Try .each-portfolio .hover-cont-wrap {
+    position: relative;
+    opacity: 1;
+  }
+  #Try .each-portfolio .hover-cont-wrap .p-title {
+    top: 0;
+  }
+  #Try .each-portfolio .hover-cont-wrap .p-desc {
+    top: 0;
+  }
+  #Try .each-portfolio .hover-cont-wrap .hover-cont-block {
+    top: 0;
+    transform: translateY(0%);
+  }
+  /* about us section style */
+  #About .about-wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 80px 0;
+  }
+  #About:after {
+    display: none;
+  }
+  /* testmonial slider style*/
+  #Testimonial .testimonial-slider li br {
+    display: none;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Header style */
+  .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  #Header .site-logo-wrap .logo img {
+    width: 60px;
+  }
+  /* Hero banner style */
+  #HeroBanner .hero-content h1 {
+    font-size: 28px;
+  }
+  #HeroBanner .hero-content p {
+    font-size: 20px;
+  }
+  #HeroBanner .hero-content a {
+    font-size: 18px;
+  }
+  /* mobile menu style */
+  #Header .mobile-menu {
+    width: 300px;
+    left: -300px;
+  }
+  #Header .mobile-menu ul {
+    margin-top: 100px;
+  }
+  /* service section style*/
+  /* porfolio section style */
+  #Try .portfolio-wrapper .each-portfolio {
+    width: calc(50% - 10px);
+  }
+  #Try .each-portfolio .hover-cont-wrap {
+    position: relative;
+    opacity: 1;
+  }
+  #Try .each-portfolio .hover-cont-wrap .p-title, #Try .each-portfolio .hover-cont-wrap .p-desc {
+    top: 0;
+  }
+  #Try .each-portfolio .hover-cont-wrap .hover-cont-block {
+    top: 0;
+    transform: translateY(0%);
+  }
+  /* testimonial slider style */
+  #Testimonial .testimonial-slider li br {
+    display: none;
+  }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* portfolio section style */
+  #Try .each-portfolio .hover-cont-wrap .p-title, #Try .each-portfolio .hover-cont-wrap .p-desc {
+    top: 0;
+  }
+  #Try .each-portfolio .hover-cont-wrap .hover-cont-block {
+    top: 0;
+    transform: translateY(0%);
+  }
+}
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    ...
+}

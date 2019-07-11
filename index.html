@@ -1,0 +1,173 @@
+{% extends "bootstrap/base.html" %}
+
+{% block head_meta %}
+<title>FILMRecommender</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+{% endblock %}
+
+{% block head_css %}
+{{super()}}
+<meta name="msapplication-TileColor" content="white">
+<meta name="theme-color" content="white">
+{% endblock %}
+
+{% block head_js %}
+{{super()}}
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="all-plugins.js"></script>
+    <script type="text/javascript" src="script/plugin-active.js"></script>
+{% endblock %}
+
+{% block body %}
+    {% block navbar %}
+    <body data-spy="scroll" data-target=".main-navigation" data-offset="150">
+      <section id="MainContainer">
+          <header id="Header">
+              <nav class="main-navigation">
+                  <div class="container clearfix">
+                      <a href="javascript:void(0)" class="menu-trigger hidden-lg-up"><span>&nbsp;</span></a>
+                      <div class="main-menu hidden-md-down">
+                          <ul class="menu-list">
+                              <li><a class="nav-link" href="javascript:void(0)" data-target="#HeroBanner">Home</a></li>
+                              <li><a class="nav-link" href="javascript:void(0)" data-target="#About">About</a></li>
+                              <li><a class="nav-link" href="javascript:void(0)" data-target="#Users">Users</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </nav>
+          </header>
+    </section>
+  </body>
+    {% endblock %}
+
+    {% block content %}
+    <section id="HeroBanner">
+          <div  style="background-image:url(https://zabavnik.club/wp-content/uploads/2018/02/Odinochestvo_1_06021818.jpg);-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;" class="hero-content">
+              <div style="background-image: url({{ url_for('static', filename='1.jpg') }})">
+              <h1>Welcome to the FILMRecommender</h1>
+              <p>Best is for you</p>
+          </div>
+    </section>
+      <!-- Banner ends here -->
+      <!-- About Us section starts here -->
+
+      <section id="About">
+          <div class="container">
+              <div style="width:auto; text-align:center"  class="about-wrapper">
+                  <h2>About FilmRecommender</h2>
+                  <p>We will help you to choose the most suitable film for to watch. It will be done by:
+                      <li>watching films</li>
+                      <li>rating them</li>
+                      <li>pressing "Predict" button to get some recommendations</li></p>
+              </div>
+          </div>
+      </section>
+
+      <div style="position:absolute;width: 20%;padding-bottom: 15px; height: 20px;background-image:url(http://clipart-library.com/image_gallery/78597.png) ">
+      </div>
+
+  <section id="Users">
+        <div class="container">
+            <div class="block-heading">
+                <h2>Users</h2>
+                <p>Please enter you name to see recommendations</p>
+            </div>
+        </div>
+    </section>
+
+      <div style="margin-top:50px;margin-bottom:100px;margin-left: 35%; width: 50%">
+        <form action="{{ url_for('predict')}}" method="POST">
+      <input  placeholder="Enter user name" autocomplete="off"style="
+    width:300px;
+    height: 57px;
+    border: none;
+    outline: none;
+    padding-left: 27px;
+    margin-right:  27px;
+
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;" type="text"  name="namequery">
+      <button style="width: 20%;
+    height: 57px;
+    border: none;
+    outline: none;
+    background: #ffb400;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;" type="submit" class="btn btn-primary">Predict</button>
+    </form>
+  </div>
+
+  <div style="position:absolute;width: 20%;padding-bottom: 15px; height: 20px;background-image:url(http://clipart-library.com/image_gallery/78597.png) ">
+  </div>
+
+    <!-- Users section ends here -->
+    <section id="Testimonial">
+      <div class="testimonial-wrap">
+      <div class="container">
+        <div class="block-heading">
+          <h2>What Clients Say About Us</h2>
+        </div>
+        <ul class="testimonial-slider">
+          <li>"This service helped me a lot. Usually, it takes quite much time <br>to find the film to watch after the school."<br>-Jennie</li>
+          <li>"Thank you very much. FILMRecommender is the best<br> service in the whole web."<br>-Tom</li>
+          <li>"I have searched such recommendation service<br> for years. Finally, it is happened."<br>-Kevin</li>
+        </ul>
+      </div>
+    </div>
+    </section>
+
+      {% endblock %}
+
+<!--<div style="position:absolute;width: 100%;height: 940px;background-image:url(http://images6.fanpop.com/image/photos/39600000/Tokyo-Ghoul-tokyo-ghoul-39622256-1920-1080.jpg) ">
+  <div style=" margin:auto; margin-top:300px;width: 70%;text-align: center;">
+    <h2 style="font-family: 'Poppins', sans-serif;color: #FFFFFF;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1.2;">Recommendation System</h2>
+    <p style="color: #FFFFFF;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1.2;">Using Machine Learning to get best films</p>
+  </div>
+  <div style="margin-top:50px;margin-left: 35%; width: 50%">
+
+</div>-->
+
+
+{% block tail_js %}
+
+{% endblock %}
+<footer id="Footer">
+          <div class="container">
+              <div class="social-share">
+              </div>
+              <div class="footer-logo-wrap">
+                  FilmRecommender &copy; 2019.
+              </div>
+          </div>
+</footer>
+{% endblock %}
+
+{% block styles %}
+{{super()}} <!-- Allows Javascripts and other styles to be inclusive in bootstrap -->
+
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='css/custom-responsive-style.css')}}">
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='css/style.css')}}">
+<link rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="manifest" href="/manifest.json">
+
+{% endblock %}
